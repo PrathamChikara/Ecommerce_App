@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const SplashScreen());
+import 'package:flutter/material.dart';void main() {
+  runApp(const MyApp());
 }
 
 class SplashScreen extends StatelessWidget {
@@ -10,17 +9,16 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.blueGrey,
-        appBar: AppBar(
-          title: Text('Ventura'),
-        ),
-        body: Container(
-          height: double.infinity,
-          width: double.infinity,
-          color: Colors.blueGrey,
-        ),
+      theme: ThemeData(
+        primarySwatch: Colors.amber,
+        scaffoldBackgroundColor: Color.fromARGB(255, 255, 255, 255),
+        appBarTheme: AppBarTheme(color: Color(0xFFffcb00), elevation: 0),
       ),
+      home: Scaffold(
+        body:Container(
+          child:Center(child: Text("Pratham Chikara")),
+        )
+      )
     );
   }
 }
