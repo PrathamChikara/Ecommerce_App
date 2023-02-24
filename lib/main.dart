@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         body:Container(
-          child:Center(child: Text("Pratham Chikara")),
+          child:Center(child: Text("Pratham Chikara new")),
         )
       )
     );
