@@ -11,13 +11,29 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.amber,
-        scaffoldBackgroundColor: Color.fromARGB(255, 255, 255, 255),
-        appBarTheme: AppBarTheme(color: Color(0xFFffcb00), elevation: 0),
+        primaryColor: Color(0xFFac5371),
+        scaffoldBackgroundColor:Colors.white,
+        appBarTheme: AppBarTheme(color: Color(0xFFac5371), elevation: 0),
       ),
       home: Scaffold(
-        body:Container(
-          child:Center(child: Text("Pratham Chikara new")),
+        body:SafeArea(
+          child: Container(
+            color: Color(0xFF6e918a),
+            child:Center(
+              child: Container(
+                
+               height:  600,
+               width: 300,
+
+              decoration: BoxDecoration(
+                   color: Colors.amber,
+                   border: Border.all(color:Color(0xFFac5371),width:5),
+                   borderRadius: BorderRadius.circular(33),
+              ),
+                    
+              ),
+            )
+          ),
         )
       )
     );
