@@ -1,4 +1,7 @@
 import 'package:ecommerce_app/Checkout_screen.dart';
+import 'package:ecommerce_app/Female_clothes.dart';
+import 'package:ecommerce_app/Male_Clothes.dart';
+import 'package:ecommerce_app/Text%20_Animation.dart';
 import 'package:ecommerce_app/order_window.dart';
 import 'package:flutter/material.dart';
 class MyHome_Screen extends StatelessWidget {
@@ -123,7 +126,7 @@ class MyHome_Screen extends StatelessWidget {
         title: Container(
           child: Center(
               child: Text(
-            "My Profile",
+            "Royal Robbins",
           )),
         ),
         actions: [
@@ -153,9 +156,15 @@ class MyHome_Screen extends StatelessWidget {
           children: [
             Container(
                 width: double.infinity,
-                height: 40,
+                height: 105,
                 margin: EdgeInsets.all(10),
-                child:Text("Find Your Style" , style: TextStyle(fontSize: 22 , fontWeight:FontWeight.bold),)
+                child: Mystyle(),
+                decoration: BoxDecoration(
+
+                   border:
+                              Border.all(color: Color.fromARGB(255, 157, 210, 199), width: 5),
+                          borderRadius: BorderRadius.all(Radius.circular(25)),
+                ),
                
                ),
             SizedBox(height: 20),
@@ -172,10 +181,10 @@ class MyHome_Screen extends StatelessWidget {
                         height: MediaQuery.of(context).size.height,
                         width: MediaQuery.of(context).size.width / 2 - 10,
                         decoration: BoxDecoration(
-                            color: Color(0xFFFFB6C1),
+                            color: Color(0xFF6e918a),
                              image: DecorationImage(image: AssetImage("Asset/jacket-1.jpg"),),
                             border:
-                                Border.all(color: Color(0xFFFFB6C1), width: 5),
+                                Border.all(color: Color(0xFF6e918a), width: 5),
                             borderRadius: BorderRadius.all(Radius.circular(25))),
                         child: Column(
                           children: [
@@ -193,7 +202,10 @@ class MyHome_Screen extends StatelessWidget {
                         ),
                       ),
                       onTap: () {
-                        // Login to the male clothes screen  * * * 
+                         Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Male_clothes()),
+                    );
                       },
                     ),
                     SizedBox(
@@ -206,7 +218,7 @@ class MyHome_Screen extends StatelessWidget {
                         width: MediaQuery.of(context).size.width / 2 - 10,
                         decoration: BoxDecoration(
                             color: Color(0xFFFFB6C1),
-                             image: DecorationImage(image: AssetImage("Asset/jacket-1.jpg"),),
+                             image: DecorationImage(image: AssetImage("Asset/dress-1.jpg"),),
                             border:
                                 Border.all(color: Color(0xFFFFB6C1), width: 5),
                             borderRadius: BorderRadius.all(Radius.circular(25))),
@@ -226,13 +238,19 @@ class MyHome_Screen extends StatelessWidget {
                         ),
                       ),
                       onTap: () {
-                        // Move to female clothes screen * * * 
+                      Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Female_clothes()),
+                    );
                       },
                     ),
                   ],
                 )),
-            SizedBox(
-              height: 20,
+            Container(
+              padding: EdgeInsets.all(2),
+              height:40,
+              width: MediaQuery.of(context).size.width,
+              child:Center(child: Text("Trending Now",style:TextStyle(fontSize: 22 ,fontWeight: FontWeight.bold)))
             ),
             Column(
               children: [
@@ -241,7 +259,7 @@ class MyHome_Screen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width - 30,
                   decoration: BoxDecoration(
                       
-                      image: DecorationImage(image: AssetImage("Asset/jacket-1.jpg"),),
+                      image: DecorationImage(image: AssetImage("Asset/dress-2.jpg"),),
                       color: Color(0xFFffcb00),
                       borderRadius: BorderRadius.all(Radius.circular(30))),
                 ),
@@ -253,7 +271,7 @@ class MyHome_Screen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width - 70,
                   decoration: BoxDecoration(
                       
-                      image: DecorationImage(image: AssetImage("Asset/jacket-1.jpg"),),
+                      image: DecorationImage(image: AssetImage("Asset/jacket-2.jpg"),),
                       color: Color(0xFFFFB6C1),
                       borderRadius: BorderRadius.all(Radius.circular(30))),
                 ),
@@ -265,7 +283,7 @@ class MyHome_Screen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width - 30,
                   decoration: BoxDecoration(
                       
-                      image: DecorationImage(image: AssetImage("Asset/jacket-1.jpg"),),
+                      image: DecorationImage(image: AssetImage("Asset/dress-3.jpg"),),
                       color: Color(0xFF6e918a),
                       borderRadius: BorderRadius.all(Radius.circular(30))),
                 ),
@@ -277,7 +295,7 @@ class MyHome_Screen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width - 70,
                   decoration: BoxDecoration(
                       
-                      image: DecorationImage(image: AssetImage("Asset/jacket-1.jpg"),),
+                      image: DecorationImage(image: AssetImage("Asset/jacket-4.jpg"),),
                       color: Color(0xFFe0a6ff),
                       borderRadius: BorderRadius.all(Radius.circular(30))),
                 ),
@@ -288,7 +306,7 @@ class MyHome_Screen extends StatelessWidget {
                   height: 370,
                   width: MediaQuery.of(context).size.width - 25,
                   decoration: BoxDecoration(
-                      image: DecorationImage(image: AssetImage("Asset/jacket-1.jpg"),),
+                      image: DecorationImage(image: AssetImage("Asset/dress-4.jpg"),),
                       color: Color(0xFFb3b98a),
                       borderRadius: BorderRadius.all(Radius.circular(30))),
                 ),

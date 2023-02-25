@@ -33,7 +33,7 @@ class MyCounterWidgetState extends State<MyCounterStatefulWidget> {
       
         color: Colors.white,
         height: 250,
-        width: double.infinity,
+        width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.all(10),
         child: Column(
           children: [
@@ -41,18 +41,11 @@ class MyCounterWidgetState extends State<MyCounterStatefulWidget> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                          
-                          ),
-                      
-                    ],
-                  ),
+                  
+                 
+              
                   height: 190,
-                  width: 180,
+                  width: 150,
                   padding: EdgeInsets.all(40),
                   decoration: BoxDecoration(
                     color: Color(0xFFedd3d3),
@@ -122,7 +115,7 @@ class MyCounterWidgetState extends State<MyCounterStatefulWidget> {
                                     width: 30,
                                     child:
                                         Center(child: Text(myNumber.toString()))),
-                                if (myNumber < 10)
+                                if (myNumber < 5)
                                   Container(
                                     width: 40,
                                     child: ElevatedButton(
