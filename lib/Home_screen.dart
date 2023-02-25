@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/Checkout_screen.dart';
+import 'package:ecommerce_app/order_window.dart';
 import 'package:flutter/material.dart';
 class MyHome_Screen extends StatelessWidget {
   const MyHome_Screen({super.key});
@@ -30,14 +31,14 @@ class MyHome_Screen extends StatelessWidget {
                     ),
                     child: Center(
                         child: Text(
-                      "Checkout",
+                      "My Cart",
                       style: TextStyle(fontSize: 20),
                     )),
                   ),
                   onTap: () {
                  Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => MyCounterStatefulWidget()),
+                      MaterialPageRoute(builder: (context) => order_window()),
                     );
                   }),
             ),
